@@ -26,7 +26,7 @@ router.post('/add-products',(req,res)=>{
 let image=req.files.image;
 image.mv('./public/product-images/'+id+'.jpg',(err)=>{
   if(!err)
-  res.render('admin/add-products')
+  res.redirect('/admin')
 })
 
     
